@@ -3,125 +3,180 @@
 
 <head>
   <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Starter Page | SinaFast</title>
-  <meta content="Starter page for SinaFast portfolio" name="description">
-  <meta content="portfolio, starter page, SinaFast" name="keywords">
 
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Fonts -->
-  <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Poppins&family=Raleway&display=swap" rel="stylesheet">
 
-  <!-- Vendor CSS Files -->
+  <!-- Vendor CSS -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
-  <!-- Main CSS File -->
+  <!-- Main CSS -->
   <link href="assets/css/main.css" rel="stylesheet">
 </head>
 
 <body class="starter-page-page">
 
-<!-- ======= Header ======= -->
+<!-- ================= HEADER (REUSABLE) ================= -->
 <header id="header" class="header dark-background d-flex flex-column">
   <i class="header-toggle d-xl-none bi bi-list"></i>
 
   <div class="profile-img">
-    <img src="assets/img/sinachi.jpeg" alt="Sinachi Franklin Ezeonyeka" class="img-fluid rounded-circle">
+    <img src="assets/img/sinachi.jpeg" class="img-fluid rounded-circle" alt="SinaFast">
   </div>
 
-  <a href="index.html" class="logo d-flex align-items-center justify-content-center">
+  <a href="index.html" class="logo d-flex justify-content-center">
     <h1 class="sitename">SinaFast</h1>
   </a>
 
-  <!-- Social Links (SYNCED) -->
   <div class="social-links text-center">
-    <a href="https://x.com/SinachiFra16993" class="twitter" target="_blank"><i class="bi bi-twitter-x"></i></a>
-    <a href="https://www.facebook.com/profile.php?id=61575225039124" class="facebook" target="_blank"><i class="bi bi-facebook"></i></a>
-    <a href="https://www.instagram.com/sinachi2016/" class="instagram" target="_blank"><i class="bi bi-instagram"></i></a>
-    <a href="https://github.com/Sinachi2" class="github" target="_blank"><i class="bi bi-github"></i></a>
-    <a href="https://www.linkedin.com/in/sinachi-franklin-ezeonyeka-581233373/" class="linkedin" target="_blank"><i class="bi bi-linkedin"></i></a>
+    <a href="https://x.com/SinachiFra16993" target="_blank"><i class="bi bi-twitter-x"></i></a>
+    <a href="https://www.facebook.com/profile.php?id=61575225039124" target="_blank"><i class="bi bi-facebook"></i></a>
+    <a href="https://www.instagram.com/sinachi2016/" target="_blank"><i class="bi bi-instagram"></i></a>
+    <a href="https://github.com/Sinachi2" target="_blank"><i class="bi bi-github"></i></a>
+    <a href="https://www.linkedin.com/in/sinachi-franklin-ezeonyeka-581233373/" target="_blank"><i class="bi bi-linkedin"></i></a>
   </div>
 
+  <nav id="navmenu" class="navmenu">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
 </header>
-<!-- End Header -->
+<!-- ================= END HEADER ================= -->
 
 <main class="main">
 
-  <!-- Page Title -->
-  <div class="page-title dark-background">
-    <div class="container d-lg-flex justify-content-between align-items-center">
-      <h1 class="mb-2 mb-lg-0">Starter Page</h1>
-      <nav class="breadcrumbs">
-        <ol>
-          <li><a href="index.html">Home</a></li>
-          <li class="current">Starter Page</li>
-        </ol>
-      </nav>
-    </div>
+<!-- Page Title -->
+<div class="page-title dark-background">
+  <div class="container d-flex justify-content-between align-items-center">
+    <h1 class="gsap-title">Starter Page</h1>
+  </div>
+</div>
+
+<!-- Intro -->
+<section class="section">
+  <div class="container section-title">
+    <h2 class="gsap-fade">Welcome</h2>
+    <p class="gsap-fade">
+      This page demonstrates GSAP animations, portfolio cards, and reusable layout.
+    </p>
+  </div>
+</section>
+
+<!-- ================= PORTFOLIO CARDS ================= -->
+<section id="portfolio" class="portfolio section light-background">
+  <div class="container section-title">
+    <h2 class="gsap-fade">Featured Projects</h2>
   </div>
 
-  <!-- Starter Section -->
-  <section id="starter-section" class="starter-section section">
-    <div class="container section-title" data-aos="fade-up">
-      <h2>Starter Section</h2>
-      <p>This page is a flexible starting point for new custom content.</p>
-    </div>
+  <div class="container">
+    <div class="row gy-4">
 
-    <div class="container" data-aos="fade-up">
-      <p>
-        Use this starter page to build new sections, features, or layouts for your
-        SinaFast portfolio website while keeping consistent design and animations.
-      </p>
+      <!-- Portfolio Item -->
+      <div class="col-lg-4 col-md-6 portfolio-card gsap-card">
+        <div class="card h-100 shadow-sm">
+          <img src="assets/img/me.png" class="card-img-top" alt="Sinachi Portfolio">
+          <div class="card-body">
+            <h5 class="card-title">Sinachi Portfolio</h5>
+            <p class="card-text">
+              Personal portfolio showcasing design, development, and creativity.
+            </p>
+            <a href="portfolio-details.html" class="btn btn-primary btn-sm">View Details</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 portfolio-card gsap-card">
+        <div class="card h-100 shadow-sm">
+          <img src="assets/img/wi.png" class="card-img-top" alt="Wisdom Portfolio">
+          <div class="card-body">
+            <h5 class="card-title">Wisdom Portfolio</h5>
+            <p class="card-text">
+              Professional portfolio for Noah Wisdom Slyvanus.
+            </p>
+            <a href="portfolio-details.html" class="btn btn-primary btn-sm">View Details</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 portfolio-card gsap-card">
+        <div class="card h-100 shadow-sm">
+          <img src="assets/img/ce.png" class="card-img-top" alt="Cedarville">
+          <div class="card-body">
+            <h5 class="card-title">Cedarville</h5>
+            <p class="card-text">
+              A modern business-focused website concept.
+            </p>
+            <a href="portfolio-details.html" class="btn btn-primary btn-sm">View Details</a>
+          </div>
+        </div>
+      </div>
+
     </div>
-  </section>
+  </div>
+</section>
+<!-- ================= END PORTFOLIO ================= -->
 
 </main>
 
-<!-- ======= Footer (SYNCED) ======= -->
+<!-- ================= FOOTER (REUSABLE) ================= -->
 <footer id="footer" class="footer light-background">
   <div class="container text-center">
 
     <div class="social-links d-flex justify-content-center gap-3 py-3">
-      <a href="https://x.com/SinachiFra16993" class="twitter" target="_blank"><i class="bi bi-twitter-x"></i></a>
-      <a href="https://www.facebook.com/profile.php?id=61575225039124" class="facebook" target="_blank"><i class="bi bi-facebook"></i></a>
-      <a href="https://www.instagram.com/sinachi2016/" class="instagram" target="_blank"><i class="bi bi-instagram"></i></a>
-      <a href="https://github.com/Sinachi2" class="github" target="_blank"><i class="bi bi-github"></i></a>
-      <a href="https://www.linkedin.com/in/sinachi-franklin-ezeonyeka-581233373/" class="linkedin" target="_blank"><i class="bi bi-linkedin"></i></a>
+      <a href="https://x.com/SinachiFra16993" target="_blank"><i class="bi bi-twitter-x"></i></a>
+      <a href="https://www.facebook.com/profile.php?id=61575225039124" target="_blank"><i class="bi bi-facebook"></i></a>
+      <a href="https://www.instagram.com/sinachi2016/" target="_blank"><i class="bi bi-instagram"></i></a>
+      <a href="https://github.com/Sinachi2" target="_blank"><i class="bi bi-github"></i></a>
+      <a href="https://www.linkedin.com/in/sinachi-franklin-ezeonyeka-581233373/" target="_blank"><i class="bi bi-linkedin"></i></a>
     </div>
 
-    <p>&copy; 2026 <strong>SinaFast</strong>. All Rights Reserved.</p>
-    <p>Designed by <strong>Sinachi Franklin Ezeonyeka</strong></p>
+    <p>&copy; 2026 <strong>SinaFast</strong>. All Rights Reserved</p>
+    <p>Designed by Sinachi Franklin Ezeonyeka</p>
 
   </div>
 </footer>
+<!-- ================= END FOOTER ================= -->
 
 <!-- Scroll Top -->
 <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center">
   <i class="bi bi-arrow-up-short"></i>
 </a>
 
-<!-- Preloader -->
-<div id="preloader"></div>
-
-<!-- Vendor JS Files -->
+<!-- Vendor JS -->
 <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 <script src="assets/vendor/aos/aos.js"></script>
 <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-<script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-<script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-<script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
 
-<!-- Main JS File -->
+<!-- GSAP -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+
+<!-- Main JS -->
 <script src="assets/js/main.js"></script>
+
+<!-- GSAP ANIMATIONS -->
+<script>
+  gsap.from(".gsap-title", { y: -40, opacity: 0, duration: 1 });
+  gsap.from(".gsap-fade", { opacity: 0, y: 30, duration: 1, stagger: 0.2 });
+  gsap.from(".gsap-card", {
+    opacity: 0,
+    y: 50,
+    duration: 0.8,
+    stagger: 0.2
+  });
+</script>
 
 </body>
 </html>
