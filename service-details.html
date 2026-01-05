@@ -15,7 +15,7 @@
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -26,6 +26,7 @@
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
+
 </head>
 
 <body class="service-details-page">
@@ -45,7 +46,7 @@
     <a href="https://x.com/SinachiFra16993" class="twitter" title="Twitter" target="_blank"><i class="bi bi-twitter-x"></i></a>
     <a href="https://www.facebook.com/profile.php?id=61575225039124" class="facebook" title="Facebook" target="_blank"><i class="bi bi-facebook"></i></a>
     <a href="https://www.instagram.com/sinachi2016/" class="instagram" title="Instagram" target="_blank"><i class="bi bi-instagram"></i></a>
-    <a href="https://github.com/Sinachi2" class="github" title="GitHub" target="_blank"><i class="bi bi-github" target="_blank"></i></a>
+    <a href="https://github.com/Sinachi2" class="github" title="GitHub" target="_blank"><i class="bi bi-github"></i></a>
     <a href="https://www.linkedin.com/in/sinachi-franklin-ezeonyeka-581233373/" class="linkedin" title="LinkedIn" target="_blank"><i class="bi bi-linkedin"></i></a>
   </div>
 </header>
@@ -55,11 +56,11 @@
   <!-- Page Title -->
   <div class="page-title dark-background">
     <div class="container d-lg-flex justify-content-between align-items-center">
-      <h1 id="breadcrumb-title" class="mb-2 mb-lg-0">Website Development</h1>
+      <h1 class="mb-2 mb-lg-0" id="service-title">Service Details</h1>
       <nav class="breadcrumbs">
         <ol>
           <li><a href="index.html">Home</a></li>
-          <li id="breadcrumb-current" class="current">Website Development</li>
+          <li class="current" id="service-breadcrumb">Service Details</li>
         </ol>
       </nav>
     </div>
@@ -67,39 +68,48 @@
 
   <!-- Service Details Section -->
   <section id="service-details" class="service-details section">
+
     <div class="container">
       <div class="row gy-4">
 
         <!-- Services Menu -->
         <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
-          <div class="services-list" id="services-sidebar">
-            <!-- Sidebar links will be populated by JS -->
+          <div class="services-list">
+            <a href="service-details.html?service=Website%20Development" class="service-link">Website Development</a>
+            <a href="service-details.html?service=UI/UX%20Design" class="service-link">UI/UX Design</a>
+            <a href="service-details.html?service=Graphics%20Design" class="service-link">Graphics Design</a>
+            <a href="service-details.html?service=E-Commerce%20Solutions" class="service-link">E-Commerce</a>
+            <a href="service-details.html?service=SEO%20Optimization" class="service-link">SEO Optimization</a>
           </div>
 
           <h4>Professional Digital Services</h4>
-          <p id="dynamic-service-desc"></p>
+          <p>We offer top-notch services to help your business grow, from stunning websites to engaging designs and optimized online presence.</p>
         </div>
 
         <!-- Service Details Content -->
         <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
-          <img src="assets/img/services.jpg" alt="" class="img-fluid services-img">
-          <h3 id="dynamic-title"></h3>
-          <p id="dynamic-description"></p>
-          <ul id="service-features"></ul>
-          <p>
+          <img src="assets/img/services.jpg" alt="" class="img-fluid services-img" id="service-img">
+          <h3 id="service-heading">Our Services Designed to Elevate Your Brand</h3>
+          <p id="service-description">
+            We provide a range of services tailored to meet your business needs and help you succeed in the digital world.
+          </p>
+          <ul id="service-list">
+            <!-- List items will be injected here -->
+          </ul>
+          <p id="service-footer">
             Every service we provide is designed with your business success in mind, ensuring quality, creativity, and results.
           </p>
         </div>
 
       </div>
     </div>
+
   </section><!-- /Service Details Section -->
 
 </main>
 
 <footer id="footer" class="footer light-background">
   <div class="container text-center">
-
     <!-- Social Links -->
     <div class="social-links d-flex justify-content-center gap-3 py-3">
       <a href="https://x.com/SinachiFra16993" class="twitter" title="Twitter" target="_blank"><i class="bi bi-twitter-x"></i></a>
@@ -108,11 +118,9 @@
       <a href="https://github.com/Sinachi2" class="github" title="GitHub" target="_blank"><i class="bi bi-github"></i></a>
       <a href="https://www.linkedin.com/in/sinachi-franklin-ezeonyeka-581233373/" class="linkedin" title="LinkedIn" target="_blank"><i class="bi bi-linkedin"></i></a>
     </div>
-
     <!-- Footer Text -->
     <p>&copy; 2026 <strong>SinaFast</strong>. All Rights Reserved.</p>
     <p>Designed by <strong>Sinachi Franklin Ezeonyeka</strong></p>
-
   </div>
 </footer>
 
@@ -138,103 +146,76 @@
 <script src="assets/js/main.js"></script>
 
 <script>
-  // Service Data
-  const services = {
-    "Website Development": {
-      description: "Custom, responsive websites optimized for performance and SEO.",
-      features: [
-        "Responsive, modern, and scalable websites.",
-        "SEO-friendly and optimized for performance.",
-        "Clean, maintainable code with modern technologies (HTML5, CSS3, JS, React)."
-      ]
-    },
-    "UI/UX Design": {
-      description: "User-centered interfaces and engaging user experiences.",
-      features: [
-        "Intuitive and engaging user interfaces.",
-        "Wireframes, prototypes, and user testing.",
-        "Designs that maximize engagement and conversion."
-      ]
-    },
-    "Graphics Design": {
-      description: "Creative branding, marketing visuals, and digital assets.",
-      features: [
-        "Branding, marketing, and social media visuals.",
-        "Creative and visually stunning designs.",
-        "Adobe Creative Suite expertise."
-      ]
-    },
-    "Web Maintenance": {
-      description: "Comprehensive website maintenance and support.",
-      features: [
-        "Updates, bug fixes, and security patches.",
-        "Performance optimization and technical support.",
-        "Keeping your site secure, fast, and up-to-date."
-      ]
-    },
-    "E-Commerce Solutions": {
-      description: "Secure and user-friendly online stores.",
-      features: [
-        "Secure, fast, and intuitive e-commerce platforms.",
-        "Shopping carts and payment integration.",
-        "Product management and customer analytics."
-      ]
-    },
-    "SEO Optimization": {
-      description: "Increase visibility and organic traffic with SEO strategies.",
-      features: [
-        "Improve website visibility and ranking.",
-        "Increase organic traffic.",
-        "On-page optimization, technical SEO, and content strategy."
-      ]
-    }
-  };
-
-  const sidebar = document.getElementById('services-sidebar');
-  const titleEl = document.getElementById('dynamic-title');
-  const descEl = document.getElementById('dynamic-description');
-  const serviceDescEl = document.getElementById('dynamic-service-desc');
-  const featuresEl = document.getElementById('service-features');
-  const breadcrumbTitle = document.getElementById('breadcrumb-title');
-  const breadcrumbCurrent = document.getElementById('breadcrumb-current');
-
-  // Populate sidebar links
-  Object.keys(services).forEach((serviceName, index) => {
-    const a = document.createElement('a');
-    a.href = "#";
-    a.textContent = serviceName;
-    if (index === 0) a.classList.add('active');
-    a.addEventListener('click', (e) => {
-      e.preventDefault();
-      updateService(serviceName);
-    });
-    sidebar.appendChild(a);
-  });
-
-  // Update content function
-  function updateService(name) {
-    const service = services[name];
-    titleEl.textContent = name;
-    breadcrumbTitle.textContent = name;
-    breadcrumbCurrent.textContent = name;
-    descEl.textContent = service.description;
-    serviceDescEl.textContent = service.description;
-
-    featuresEl.innerHTML = "";
-    service.features.forEach(f => {
-      const li = document.createElement('li');
-      li.innerHTML = `<i class="bi bi-check-circle"></i> <span>${f}</span>`;
-      featuresEl.appendChild(li);
-    });
-
-    // Update active sidebar link
-    document.querySelectorAll('#services-sidebar a').forEach(link => link.classList.remove('active'));
-    document.querySelector(`#services-sidebar a:nth-child(${Object.keys(services).indexOf(name)+1})`).classList.add('active');
+// Service data
+const services = {
+  "Website Development": {
+    img: "assets/img/services.jpg",
+    heading: "Website Development: Responsive and Scalable",
+    description: "I create custom, responsive websites using modern technologies including HTML5, CSS3, JavaScript, and React. Each project is optimized for performance, SEO, and user experience with a focus on clean, maintainable code.",
+    list: [
+      "Responsive and modern websites",
+      "Optimized for SEO and performance",
+      "Clean and maintainable code",
+      "User-friendly interfaces",
+      "Custom solutions for every client"
+    ]
+  },
+  "UI/UX Design": {
+    img: "assets/img/services.jpg",
+    heading: "UI/UX Design: Engaging and Intuitive Interfaces",
+    description: "I design user-centered interfaces and experiences that combine aesthetic appeal with intuitive functionality. Wireframes, prototypes, and designs are created to maximize engagement and conversion.",
+    list: [
+      "Intuitive navigation",
+      "User-centered design",
+      "Wireframes and prototypes",
+      "Visual consistency",
+      "Enhanced user engagement"
+    ]
+  },
+  "Graphics Design": {
+    img: "assets/img/services.jpg",
+    heading: "Graphics Design: Creative Branding & Marketing",
+    description: "Professional graphic design for branding, marketing materials, social media content, and digital assets. I deliver visually stunning and on-brand designs that communicate your message effectively.",
+    list: [
+      "Branding and logos",
+      "Marketing materials",
+      "Social media visuals",
+      "Digital assets",
+      "Consistent visual identity"
+    ]
+  },
+  "E-Commerce Solutions": {
+    img: "assets/img/services.jpg",
+    heading: "E-Commerce Solutions: Secure & Fast Stores",
+    description: "I build full-featured e-commerce platforms with intuitive shopping carts, secure payment integration, inventory management, and analytics to help you succeed in online sales.",
+    list: [
+      "Secure payment gateways",
+      "Shopping cart integration",
+      "Inventory management",
+      "Customer analytics",
+      "User-friendly stores"
+    ]
+  },
+  "SEO Optimization": {
+    img: "assets/img/services.jpg",
+    heading: "SEO Optimization: Improve Visibility & Traffic",
+    description: "I implement search engine optimization strategies to improve website visibility, increase organic traffic, and enhance online presence with on-page and technical SEO methods.",
+    list: [
+      "On-page optimization",
+      "Technical SEO improvements",
+      "Content strategy",
+      "Keyword research",
+      "Increase organic traffic"
+    ]
   }
+};
 
-  // Initialize first service
-  updateService(Object.keys(services)[0]);
-</script>
+// Get URL parameter
+const params = new URLSearchParams(window.location.search);
+const serviceName = params.get("service") || "Website Development";
+const data = services[serviceName];
 
-</body>
-</html>
+// Update page content dynamically
+document.getElementById("service-title").textContent = serviceName;
+document.getElementById("service-breadcrumb").textContent = serviceName;
+document.getElementById("service-heading").text
