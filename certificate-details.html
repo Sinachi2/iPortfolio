@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Certificate Details - SinaFast</title>
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/css/main.css" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.14.0/gsap.min.js"></script>
+</head>
+<body>
+
+<div class="container-fluid">
+  <div class="row">
+
+    <!-- Sidebar -->
+    <div class="col-lg-3 sidebar bg-light p-4">
+      <h3>Certificates</h3>
+      <ul class="list-unstyled">
+        <li><a href="certificate-details.html?id=responsive-web">Responsive Web Design</a></li>
+        <li><a href="certificate-details.html?id=javascript">JavaScript Algorithms & Data Structures</a></li>
+        <li><a href="certificate-details.html?id=frontend-libs">Frontend Libraries</a></li>
+        <li><a href="certificate-details.html?id=data-viz">Data Visualization</a></li>
+        <li><a href="certificate-details.html?id=ai-foundation">Generative AI – Foundation</a></li>
+        <li><a href="certificate-details.html?id=ai-medium">Generative AI – Medium</a></li>
+        <li><a href="certificate-details.html?id=ai-master">Generative AI – Master</a></li>
+        <li><a href="certificate-details.html?id=online-access">Access Information Online</a></li>
+        <li><a href="certificate-details.html?id=safe-online">Participate Safely Online</a></li>
+        <li><a href="certificate-details.html?id=creativity">Banish Your Inner Critic</a></li>
+        <li><a href="certificate-details.html?id=microsoft365">Getting Started with Microsoft 365</a></li>
+        <li><a href="certificate-details.html?id=hardware">Computer Hardware Basics</a></li>
+        <li><a href="certificate-details.html?id=os-basics">Operating Systems Basics</a></li>
+        <li><a href="certificate-details.html?id=cybersecurity">Introduction to Cybersecurity</a></li>
+      </ul>
+    </div>
+
+    <!-- Certificate Main -->
+    <div class="col-lg-9 p-4 certificate-main">
+      <div id="certificate-content"></div>
+    </div>
+
+  </div>
+</div>
+
+<script>
+const certificates = {
+  "responsive-web": {title:"Responsive Web Design", img:"assets/img/cert1.png", platform:"FreeCodeCamp", desc:"HTML, CSS, Flexbox, Grid and responsive layouts."},
+  "javascript": {title:"JavaScript Algorithms & Data Structures", img:"assets/img/cert2.png", platform:"FreeCodeCamp", desc:"Algorithms, problem-solving and core JavaScript."},
+  "frontend-libs": {title:"Frontend Development Libraries", img:"assets/img/cert3.png", platform:"FreeCodeCamp", desc:"React, Redux, Bootstrap, UI libraries."},
+  "data-viz": {title:"Data Visualization", img:"assets/img/cert4.png", platform:"FreeCodeCamp", desc:"Charts, graphs and D3.js visualization."},
+  "ai-foundation": {title:"Generative AI – Foundation", img:"assets/img/cert5.jpg", platform:"Nigeria Learning Passport", desc:"AI basics, ethics and applications."},
+  "ai-medium": {title:"Generative AI – Medium", img:"assets/img/cert6.jpg", platform:"Nigeria Learning Passport", desc:"Intermediate AI tools and workflows."},
+  "ai-master": {title:"Generative AI – Master", img:"assets/img/cert7.jpg", platform:"Nigeria Learning Passport", desc:"Advanced AI systems and responsible AI."},
+  "online-access": {title:"Access Information Online", img:"assets/img/cert8.jpg", platform:"Nigeria Learning Passport", desc:"Online research and digital literacy."},
+  "safe-online": {title:"Participate Safely Online", img:"assets/img/cert9.jpg", platform:"Nigeria Learning Passport", desc:"Online safety and digital responsibility."},
+  "creativity": {title:"Banish Your Inner Critic", img:"assets/img/cert10.jpg", platform:"Nigeria Learning Passport", desc:"Creativity and personal development."},
+  "microsoft365": {title:"Getting Started with Microsoft 365", img:"assets/img/cert11.jpg", platform:"Nigeria Learning Passport", desc:"Microsoft tools and productivity basics."},
+  "hardware": {title:"Computer Hardware Basics", img:"assets/img/cert12.jpg", platform:"Cisco", desc:"PC components and hardware fundamentals."},
+  "os-basics": {title:"Operating Systems Basics", img:"assets/img/cert13.jpg", platform:"Cisco", desc:"OS concepts and system management."},
+  "cybersecurity": {title:"Introduction to Cybersecurity", img:"assets/img/cert14.jpg", platform:"Cisco", desc:"Cyber threats, protection and awareness."}
+};
+
+const params = new URLSearchParams(window.location.search);
+const id = params.get("id");
+const cert = certificates[id] || certificates["responsive-web"];
+
+document.getElementById("certificate-content").innerHTML = `
+  <div class="certificate-detail">
+    <h2>${cert.title}</h2>
+    <img src="${cert.img}" class="img-fluid mb-3" alt="${cert.title}">
+    <p><strong>Platform:</strong> ${cert.platform}</p>
+    <p>${cert.desc}</p>
+    <a href="assets/docs/${id}.pdf" target="_blank" class="btn btn-primary">View/Download PDF</a>
+  </div>
+`;
+
+gsap.from(".certificate-detail", {opacity:0, y:50, duration:0.8, ease:"power3.out"});
+</script>
+
+</body>
+</html>
