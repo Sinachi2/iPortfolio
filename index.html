@@ -198,7 +198,7 @@
             <nav id="navmenu" class="navmenu">
                 <ul>
                     <li>
-                        <a href="#hero" class="active"><i class="bi bi-house navicon"></i>Home</a>
+                        <a href="#hero" class="active"><i class="bi bi-house navicon"></i> Home</a>
                     </li>
                     <li>
                         <a href="#about"><i class="bi bi-person navicon"></i> About Me</a>
@@ -207,43 +207,44 @@
                         <a href="#skills"><i class="bi bi-bar-chart-line navicon"></i> My Skills</a>
                     </li>
                     <li>
-                        <a href="#resume"><i class="bi bi-code-slash"></i> Tech Life</a>
+                        <a href="#resume"><i class="bi bi-code-slash navicon"></i> Tech Life</a>
                     </li>
                     <li>
-                        <a href="#education"><i class="bi bi-mortarboard-fill"></i> Education</a>
+                        <a href="#education"><i class="bi bi-mortarboard-fill navicon"></i> Education</a>
                     </li>
-
                     <li>
-                        <a class="dropdown-item" href="#services">
-                            <i class="bi bi-hdd-stack navicon me-2"></i>My Services
-                        </a>
+                        <a href="#services"><i class="bi bi-hdd-stack navicon"></i> My Services</a>
                     </li>
 
                     <li class="dropdown">
-                        <a href="#">
-                            <i class="bi bi-menu-button navicon"></i> <span>More</span>
+                        <a href="#" class="dropdown-toggle">
+                            <i class="bi bi-menu-button navicon"></i> More
                             <i class="bi bi-chevron-down toggle-dropdown"></i>
                         </a>
-                        <ul>
+                        <ul class="dropdown-menu">
                             <li>
-                                <a class="dropdown-item" href="#testimonials">
-                                    <i class="bi bi-chat-left-quote navicon me-2"></i>Testimonials
+                                <a href="#testimonials" class="dropdown-item">
+                                    <i class="bi bi-chat-left-quote navicon me-2"></i> Testimonials
                                 </a>
                             </li>
                             <li>
-                                <a href="#certificates"><i class="bi bi-award navicon"></i> My Certificates</a>
-                            </li>
-                            <li>
-                                <a href="#portfolio"><i class="bi bi-images navicon"></i> My Portfolio</a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="#sponsor">
-                                    <i class="bi bi-cash-stack navicon me-2"></i>Sponsor Me
+                                <a href="#certificates" class="dropdown-item">
+                                    <i class="bi bi-award navicon me-2"></i> My Certificates
                                 </a>
                             </li>
                             <li>
-                                <a class="dropdown-item" href="#contact">
-                                    <i class="bi bi-envelope navicon me-2"></i>Contact Me
+                                <a href="#portfolio" class="dropdown-item">
+                                    <i class="bi bi-images navicon me-2"></i> My Portfolio
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#sponsor" class="dropdown-item">
+                                    <i class="bi bi-cash-stack navicon me-2"></i> Sponsor Me
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#contact" class="dropdown-item">
+                                    <i class="bi bi-envelope navicon me-2"></i> Contact Me
                                 </a>
                             </li>
                         </ul>
@@ -1873,135 +1874,277 @@
                 });
             </script>
 
-<!-- SF AI Bot Widget -->
-<div id="sfAiWrapper">
-  <!-- Bot Toggle Button -->
-  <button id="sfAiToggle" class="sf-ai-btn">🤖<span class="sf-ai-online"></span></button>
+            <!-- SF AI Bot Widget -->
+            <div id="sfAiWrapper">
+                <!-- Bot Toggle Button -->
+                <button id="sfAiToggle" class="sf-ai-btn">🤖<span class="sf-ai-online"></span></button>
 
-  <!-- Bot Chat Box -->
-  <div id="sfAiBox" class="sf-ai-box">
-    <div class="sf-ai-header">
-      <strong>SinaFast AI</strong>
-      <span class="sf-ai-status">Online</span>
-      <button id="sfAiClose">×</button>
-    </div>
+                <!-- Bot Chat Box -->
+                <div id="sfAiBox" class="sf-ai-box">
+                    <div class="sf-ai-header">
+                        <strong>SinaFast AI</strong>
+                        <span class="sf-ai-status">Online</span>
+                        <button id="sfAiClose">×</button>
+                    </div>
 
-    <!-- Quick Questions -->
-    <div class="sf-ai-questions">
-      <button onclick="quick('Hello')">Hello</button>
-      <button onclick="quick('What services do you offer?')">Services</button>
-      <button onclick="quick('Show portfolio projects')">Portfolio</button>
-      <button onclick="quick('What skills do you have?')">Skills</button>
-      <button onclick="quick('How can I hire you?')">Hire</button>
-      <button onclick="quick('Help')">Help</button>
-    </div>
+                    <!-- Quick Questions -->
+                    <div class="sf-ai-questions">
+                        <button onclick="quick('Hello')">Hello</button>
+                        <button onclick="quick('What services do you offer?')">Services</button>
+                        <button onclick="quick('Show portfolio projects')">Portfolio</button>
+                        <button onclick="quick('What skills do you have?')">Skills</button>
+                        <button onclick="quick('How can I hire you?')">Hire</button>
+                        <button onclick="quick('Help')">Help</button>
+                    </div>
 
-    <!-- Messages -->
-    <div id="sfAiMessages" class="sf-ai-messages">
-      <div class="sf-ai-msg bot"><span>Hi! I’m SinaFast AI. Ask me anything about this portfolio.</span></div>
-    </div>
-    <div id="sfAiTyping" class="sf-ai-typing">SinaFast AI is typing…</div>
+                    <!-- Messages -->
+                    <div id="sfAiMessages" class="sf-ai-messages">
+                        <div class="sf-ai-msg bot">
+                            <span>Hi! I’m SinaFast AI. Ask me anything about this portfolio.</span>
+                        </div>
+                    </div>
+                    <div id="sfAiTyping" class="sf-ai-typing">SinaFast AI is typing…</div>
 
-    <!-- Input -->
-    <div class="sf-ai-input">
-      <input type="text" id="sfAiInput" placeholder="Type a message...">
-      <button id="sfAiSend">Send</button>
-    </div>
-  </div>
-</div>
+                    <!-- Input -->
+                    <div class="sf-ai-input">
+                        <input type="text" id="sfAiInput" placeholder="Type a message..." />
+                        <button id="sfAiSend">Send</button>
+                    </div>
+                </div>
+            </div>
 
-<!-- CSS -->
-<style>
-#sfAiWrapper { position: fixed; left: 50px; bottom: 100px; font-family:'Poppins',sans-serif; z-index:9999; }
-.sf-ai-btn { width:60px; height:60px; border-radius:50%; background:linear-gradient(135deg,#6c63ff,#ff8a00); color:#fff; font-size:26px; cursor:pointer; box-shadow:0 10px 25px rgba(0,0,0,.3); position:relative; transition: transform 0.3s; }
-.sf-ai-btn:hover { transform: scale(1.1); }
-.sf-ai-btn .sf-ai-online { position:absolute; top:6px; right:6px; width:10px; height:10px; background:#00ff6a; border-radius:50%; box-shadow:0 0 3px #00ff6a; }
-.sf-ai-box { width:360px; max-width:90vw; background:#fff; border-radius:16px; box-shadow:0 20px 40px rgba(0,0,0,.3); flex-direction:column; overflow:hidden; transition: all 0.3s ease; opacity:0; transform:scale(0.9) translateY(20px); pointer-events:none; display:flex; }
-.sf-ai-box.active { opacity:1; transform:scale(1) translateY(0); pointer-events:auto; }
-.sf-ai-header { background:linear-gradient(135deg,#6c63ff,#ff8a00); color:#fff; padding:14px; display:flex; justify-content:space-between; align-items:center; font-size:15px; cursor: move; }
-.sf-ai-header button { background:none; border:none; font-size:18px; color:#fff; cursor:pointer; }
-.sf-ai-questions { display:flex; flex-wrap:wrap; gap:6px; padding:10px; background:#f7f7f7; }
-.sf-ai-questions button { font-size:12px; padding:5px 10px; border-radius:20px; border:1px solid #ddd; background:#fff; cursor:pointer; transition:all 0.2s; }
-.sf-ai-questions button:hover { background:#6c63ff; color:#fff; border-color:#6c63ff; }
-.sf-ai-messages { height:280px; padding:12px; overflow-y:auto; font-size:14px; }
-.sf-ai-msg { margin-bottom:10px; display:flex; }
-.sf-ai-msg span { display:inline-block; padding:8px 14px; border-radius:12px; max-width:80%; line-height:1.4; }
-.sf-ai-msg.user span { background:#6c63ff; color:#fff; margin-left:auto; }
-.sf-ai-msg.bot span { background:#f1f1f1; color:#222; }
-.sf-ai-typing { display:none; font-size:12px; padding:6px 12px; color:#777; }
-.sf-ai-input { display:flex; border-top:1px solid #ddd; }
-.sf-ai-input input { flex:1; padding:10px; border:none; outline:none; font-size:14px; }
-.sf-ai-input button { background:#6c63ff; border:none; color:#fff; padding:10px 14px; cursor:pointer; font-size:14px; transition:all 0.2s; }
-.sf-ai-input button:hover { background:#574fcf; }
-@media(max-width:480px){ .sf-ai-box { width:90vw; bottom:50px; } }
-</style>
+            <!-- CSS -->
+            <style>
+                #sfAiWrapper {
+                    position: fixed;
+                    left: 50px;
+                    bottom: 100px;
+                    font-family: "Poppins", sans-serif;
+                    z-index: 9999;
+                }
+                .sf-ai-btn {
+                    width: 60px;
+                    height: 60px;
+                    border-radius: 50%;
+                    background: linear-gradient(135deg, #6c63ff, #ff8a00);
+                    color: #fff;
+                    font-size: 26px;
+                    cursor: pointer;
+                    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+                    position: relative;
+                    transition: transform 0.3s;
+                }
+                .sf-ai-btn:hover {
+                    transform: scale(1.1);
+                }
+                .sf-ai-btn .sf-ai-online {
+                    position: absolute;
+                    top: 6px;
+                    right: 6px;
+                    width: 10px;
+                    height: 10px;
+                    background: #00ff6a;
+                    border-radius: 50%;
+                    box-shadow: 0 0 3px #00ff6a;
+                }
+                .sf-ai-box {
+                    width: 360px;
+                    max-width: 90vw;
+                    background: #fff;
+                    border-radius: 16px;
+                    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+                    flex-direction: column;
+                    overflow: hidden;
+                    transition: all 0.3s ease;
+                    opacity: 0;
+                    transform: scale(0.9) translateY(20px);
+                    pointer-events: none;
+                    display: flex;
+                }
+                .sf-ai-box.active {
+                    opacity: 1;
+                    transform: scale(1) translateY(0);
+                    pointer-events: auto;
+                }
+                .sf-ai-header {
+                    background: linear-gradient(135deg, #6c63ff, #ff8a00);
+                    color: #fff;
+                    padding: 14px;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    font-size: 15px;
+                    cursor: move;
+                }
+                .sf-ai-header button {
+                    background: none;
+                    border: none;
+                    font-size: 18px;
+                    color: #fff;
+                    cursor: pointer;
+                }
+                .sf-ai-questions {
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: 6px;
+                    padding: 10px;
+                    background: #f7f7f7;
+                }
+                .sf-ai-questions button {
+                    font-size: 12px;
+                    padding: 5px 10px;
+                    border-radius: 20px;
+                    border: 1px solid #ddd;
+                    background: #fff;
+                    cursor: pointer;
+                    transition: all 0.2s;
+                }
+                .sf-ai-questions button:hover {
+                    background: #6c63ff;
+                    color: #fff;
+                    border-color: #6c63ff;
+                }
+                .sf-ai-messages {
+                    height: 280px;
+                    padding: 12px;
+                    overflow-y: auto;
+                    font-size: 14px;
+                }
+                .sf-ai-msg {
+                    margin-bottom: 10px;
+                    display: flex;
+                }
+                .sf-ai-msg span {
+                    display: inline-block;
+                    padding: 8px 14px;
+                    border-radius: 12px;
+                    max-width: 80%;
+                    line-height: 1.4;
+                }
+                .sf-ai-msg.user span {
+                    background: #6c63ff;
+                    color: #fff;
+                    margin-left: auto;
+                }
+                .sf-ai-msg.bot span {
+                    background: #f1f1f1;
+                    color: #222;
+                }
+                .sf-ai-typing {
+                    display: none;
+                    font-size: 12px;
+                    padding: 6px 12px;
+                    color: #777;
+                }
+                .sf-ai-input {
+                    display: flex;
+                    border-top: 1px solid #ddd;
+                }
+                .sf-ai-input input {
+                    flex: 1;
+                    padding: 10px;
+                    border: none;
+                    outline: none;
+                    font-size: 14px;
+                }
+                .sf-ai-input button {
+                    background: #6c63ff;
+                    border: none;
+                    color: #fff;
+                    padding: 10px 14px;
+                    cursor: pointer;
+                    font-size: 14px;
+                    transition: all 0.2s;
+                }
+                .sf-ai-input button:hover {
+                    background: #574fcf;
+                }
+                @media (max-width: 480px) {
+                    .sf-ai-box {
+                        width: 90vw;
+                        bottom: 50px;
+                    }
+                }
+            </style>
 
-<!-- JS -->
-<script>
-const btn = document.getElementById("sfAiToggle");
-const box = document.getElementById("sfAiBox");
-const closeBtn = document.getElementById("sfAiClose");
-const messages = document.getElementById("sfAiMessages");
-const input = document.getElementById("sfAiInput");
-const sendBtn = document.getElementById("sfAiSend");
-const typing = document.getElementById("sfAiTyping");
+            <!-- JS -->
+            <script>
+                const btn = document.getElementById("sfAiToggle");
+                const box = document.getElementById("sfAiBox");
+                const closeBtn = document.getElementById("sfAiClose");
+                const messages = document.getElementById("sfAiMessages");
+                const input = document.getElementById("sfAiInput");
+                const sendBtn = document.getElementById("sfAiSend");
+                const typing = document.getElementById("sfAiTyping");
 
-btn.onclick = ()=>box.classList.toggle('active');
-closeBtn.onclick = ()=>box.classList.remove('active');
-document.addEventListener('click', e=>{if(!box.contains(e.target) && e.target!==btn) box.classList.remove('active');});
+                btn.onclick = () => box.classList.toggle("active");
+                closeBtn.onclick = () => box.classList.remove("active");
+                document.addEventListener("click", (e) => {
+                    if (!box.contains(e.target) && e.target !== btn) box.classList.remove("active");
+                });
 
-function addMsg(text,type){
-  const div = document.createElement("div");
-  div.className="sf-ai-msg "+type;
-  div.innerHTML=`<span>${text}</span>`;
-  messages.appendChild(div);
-  messages.scrollTop=messages.scrollHeight;
-}
+                function addMsg(text, type) {
+                    const div = document.createElement("div");
+                    div.className = "sf-ai-msg " + type;
+                    div.innerHTML = `<span>${text}</span>`;
+                    messages.appendChild(div);
+                    messages.scrollTop = messages.scrollHeight;
+                }
 
-// Quick questions
-function quick(q){ input.value=q; sendBtn.click(); }
+                // Quick questions
+                function quick(q) {
+                    input.value = q;
+                    sendBtn.click();
+                }
 
-// Send message to ChatGPT backend
-async function botReply(userText){
-  typing.style.display="block";
-  addMsg(userText,"user");
+                // Send message to ChatGPT backend
+                async function botReply(userText) {
+                    typing.style.display = "block";
+                    addMsg(userText, "user");
 
-  try{
-    const res=await fetch("http://localhost:3000/chat",{ // replace with deployed backend if online
-      method:"POST",
-      headers:{"Content-Type":"application/json"},
-      body: JSON.stringify({ message:userText })
-    });
-    const data=await res.json();
-    typing.style.display="none";
-    addMsg(data.reply,"bot");
-  }catch{
-    typing.style.display="none";
-    addMsg("Server error. Try again later.","bot");
-  }
-}
+                    try {
+                        const res = await fetch("http://localhost:3000/chat", {
+                            // replace with deployed backend if online
+                            method: "POST",
+                            headers: { "Content-Type": "application/json" },
+                            body: JSON.stringify({ message: userText }),
+                        });
+                        const data = await res.json();
+                        typing.style.display = "none";
+                        addMsg(data.reply, "bot");
+                    } catch {
+                        typing.style.display = "none";
+                        addMsg("Server error. Try again later.", "bot");
+                    }
+                }
 
-sendBtn.onclick=()=>{ if(input.value.trim()==="") return; botReply(input.value); input.value=""; }
-input.addEventListener("keypress", e=>{ if(e.key==="Enter") sendBtn.click(); });
+                sendBtn.onclick = () => {
+                    if (input.value.trim() === "") return;
+                    botReply(input.value);
+                    input.value = "";
+                };
+                input.addEventListener("keypress", (e) => {
+                    if (e.key === "Enter") sendBtn.click();
+                });
 
-// Draggable Bot
-let dragging=false, offsetX, offsetY;
-const wrapper=document.getElementById('sfAiWrapper');
-wrapper.onmousedown=(e)=>{
-  if(!box.contains(e.target)&&e.target!==btn) return;
-  dragging=true;
-  offsetX=e.clientX-wrapper.getBoundingClientRect().left;
-  offsetY=e.clientY-wrapper.getBoundingClientRect().top;
-};
-document.onmouseup=()=>dragging=false;
-document.onmousemove=(e)=>{
-  if(!dragging) return;
-  wrapper.style.left=(e.clientX-offsetX)+"px";
-  wrapper.style.top=(e.clientY-offsetY)+"px";
-};
-</script>
-
-
+                // Draggable Bot
+                let dragging = false,
+                    offsetX,
+                    offsetY;
+                const wrapper = document.getElementById("sfAiWrapper");
+                wrapper.onmousedown = (e) => {
+                    if (!box.contains(e.target) && e.target !== btn) return;
+                    dragging = true;
+                    offsetX = e.clientX - wrapper.getBoundingClientRect().left;
+                    offsetY = e.clientY - wrapper.getBoundingClientRect().top;
+                };
+                document.onmouseup = () => (dragging = false);
+                document.onmousemove = (e) => {
+                    if (!dragging) return;
+                    wrapper.style.left = e.clientX - offsetX + "px";
+                    wrapper.style.top = e.clientY - offsetY + "px";
+                };
+            </script>
         </main>
         <footer id="footer" class="footer light-background">
             <div class="container text-center">
