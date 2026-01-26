@@ -1461,29 +1461,23 @@
                                                 class="list-unstyled"
                                                 style="color: #1e293b; font-size: 1.05rem; line-height: 2"
                                             >
-                                                <li
-                                                    class="mb-2 p-2 rounded hover-effect"
-                                                    style="transition: all 0.3s; cursor: pointer"
-                                                >
+                                                <li class="mb-2 p-2 rounded hover-effect">
                                                     💻 <strong>Front-End Web Development</strong>
                                                 </li>
-                                                <li
-                                                    class="mb-2 p-2 rounded hover-effect"
-                                                    style="transition: all 0.3s; cursor: pointer"
-                                                >
+                                                <li class="mb-2 p-2 rounded hover-effect">
                                                     🎨 <strong>Web & UI/UX Design</strong>
                                                 </li>
-                                                <li
-                                                    class="mb-2 p-2 rounded hover-effect"
-                                                    style="transition: all 0.3s; cursor: pointer"
-                                                >
+                                                <li class="mb-2 p-2 rounded hover-effect">
                                                     🖌 <strong>Graphics Design & Branding</strong>
                                                 </li>
-                                                <li
-                                                    class="mb-2 p-2 rounded hover-effect"
-                                                    style="transition: all 0.3s; cursor: pointer"
-                                                >
-                                                    📁 <strong>Portfolio & Personal Brand Projects</strong>
+                                                <li class="mb-2 p-2 rounded hover-effect">
+                                                    🛒 <strong>E-Commerce Website Solutions</strong>
+                                                </li>
+                                                <li class="mb-2 p-2 rounded hover-effect">
+                                                    🔧 <strong>Website Maintenance & Support</strong>
+                                                </li>
+                                                <li class="mb-2 p-2 rounded hover-effect">
+                                                    📈 <strong>SEO & Performance Optimization</strong>
                                                 </li>
                                             </ul>
                                         </div>
@@ -1557,116 +1551,109 @@
                                             action="https://formspree.io/f/xjgyjonl"
                                             method="POST"
                                             class="php-email-form"
-                                            data-aos="fade-up"
-                                            data-aos-delay="200"
                                         >
                                             <div class="row g-3">
                                                 <div class="col-md-6">
-                                                    <label class="form-label fw-semibold" style="color: #475569"
-                                                        >Full Name</label
-                                                    >
+                                                    <label class="form-label fw-semibold">Full Name</label>
                                                     <input
                                                         type="text"
+                                                        name="full_name"
                                                         class="form-control form-control-lg border-2"
                                                         placeholder="Sinachi Franklin Ezeonyeka"
                                                         required
-                                                        style="font-size: 1rem; border-color: #f1f5f9"
                                                     />
                                                 </div>
+
                                                 <div class="col-md-6">
-                                                    <label class="form-label fw-semibold" style="color: #475569"
-                                                        >Email Address</label
-                                                    >
+                                                    <label class="form-label fw-semibold">Email Address</label>
                                                     <input
                                                         type="email"
+                                                        name="email"
                                                         class="form-control form-control-lg border-2"
                                                         placeholder="ezeonyekasinachi@gmail.com"
                                                         required
-                                                        style="font-size: 1rem; border-color: #f1f5f9"
                                                     />
                                                 </div>
+
                                                 <div class="col-md-6">
-                                                    <label class="form-label fw-semibold" style="color: #475569"
-                                                        >Phone Number</label
-                                                    >
+                                                    <label class="form-label fw-semibold">Phone Number</label>
                                                     <input
                                                         type="tel"
+                                                        name="phone"
                                                         class="form-control form-control-lg border-2"
                                                         placeholder="+234 806 333 2087"
-                                                        style="font-size: 1rem; border-color: #f1f5f9"
                                                     />
                                                 </div>
+
                                                 <div class="col-md-6">
-                                                    <label class="form-label fw-semibold" style="color: #475569"
-                                                        >Service Needed</label
-                                                    >
+                                                    <label class="form-label fw-semibold">Service Needed</label>
                                                     <select
+                                                        name="service"
                                                         class="form-select form-control-lg border-2"
                                                         required
-                                                        style="font-size: 1rem; border-color: #f1f5f9"
                                                     >
-                                                        <option value="" selected disabled>Select a service</option>
-                                                        <option value="web-development">
-                                                            Front-End Web Development
-                                                        </option>
-                                                        <option value="web-design">Web & UI/UX Design</option>
-                                                        <option value="graphics-design">
-                                                            Graphics Design & Branding
-                                                        </option>
-                                                        <option value="portfolio">
-                                                            Portfolio & Personal Brand Projects
-                                                        </option>
+                                                        <option disabled selected>Select a service</option>
+                                                        <option>Front-End Web Development</option>
+                                                        <option>Web & UI/UX Design</option>
+                                                        <option>Graphics Design & Branding</option>
+                                                        <option>E-Commerce Website Solutions</option>
+                                                        <option>Website Maintenance & Support</option>
+                                                        <option>SEO & Performance Optimization</option>
                                                     </select>
                                                 </div>
+
                                                 <div class="col-md-6">
-                                                    <label class="form-label fw-semibold" style="color: #475569"
-                                                        >Estimated Budget Range</label
-                                                    >
+                                                    <label class="form-label fw-semibold">Estimated Budget</label>
                                                     <select
+                                                        name="budget"
                                                         class="form-select form-control-lg border-2"
                                                         required
-                                                        style="font-size: 1rem; border-color: #f1f5f9"
                                                     >
-                                                        <option value="" selected disabled>Select budget range</option>
-                                                        <option value="200k-500k">₦200,000 - ₦500,000</option>
-                                                        <option value="500k-1m">₦500,000 - ₦1,000,000</option>
-                                                        <option value="1m+">₦1,000,000+</option>
+                                                        <option disabled selected>Select budget range</option>
+                                                        <option>₦30,000 – ₦70,000</option>
+                                                        <option>₦70,000 – ₦150,000</option>
+                                                        <option>₦150,000 – ₦300,000</option>
+                                                        <option>₦300,000+</option>
                                                     </select>
                                                 </div>
+
                                                 <div class="col-md-6">
-                                                    <label class="form-label fw-semibold" style="color: #475569"
-                                                        >Project Timeline</label
-                                                    >
+                                                    <label class="form-label fw-semibold">Project Timeline</label>
                                                     <select
+                                                        name="timeline"
                                                         class="form-select form-control-lg border-2"
                                                         required
-                                                        style="font-size: 1rem; border-color: #f1f5f9"
                                                     >
-                                                        <option value="" selected disabled>Select timeline</option>
-                                                        <option value="1-week">1 Week</option>
-                                                        <option value="2-weeks">2 Weeks</option>
-                                                        <option value="1-month">1 Month</option>
+                                                        <option disabled selected>Select timeline</option>
+                                                        <option>
+                                                            ASAP (Priority delivery – additional cost applies)
+                                                        </option>
+                                                        <option>1 Week</option>
+                                                        <option>2 Weeks</option>
+                                                        <option>1 Month</option>
                                                     </select>
                                                 </div>
+
                                                 <div class="col-12">
-                                                    <label class="form-label fw-semibold" style="color: #475569"
-                                                        >Project Description</label
-                                                    >
+                                                    <label class="form-label fw-semibold">Project Description</label>
                                                     <textarea
+                                                        name="message"
                                                         class="form-control border-2"
                                                         rows="4"
-                                                        placeholder="Briefly describe your project, vision, and timeline..."
-                                                        style="font-size: 1rem; border-color: #f1f5f9"
+                                                        placeholder="Briefly describe your project..."
                                                     ></textarea>
                                                 </div>
+
+                                                <!-- REAL SUBMIT BUTTON -->
                                                 <div class="col-12 mt-4">
-                                                    <a
-                                                        href="#sponsor"
+                                                    <button
+                                                        type="submit"
                                                         class="btn btn-primary btn-lg w-100 fw-bold shadow-sm"
                                                         style="background-color: #2563eb; border: none; padding: 14px"
                                                     >
-                                                        Request My Custom Quote 💡
-                                                    </a>
+                                                        Launch your Project 🚀
+                                                    </button>
+
                                                     <p class="text-center text-muted small mt-3 mb-0">
                                                         I usually respond within 24 hours.
                                                     </p>
