@@ -1948,14 +1948,14 @@
 <!-- FLOATING DARK MODE BUTTON -->
 <button id="themeToggle" class="theme-float-btn" aria-label="Toggle dark mode">
   <span class="icon">🌙</span>
-  <span class="tooltip-text">Ctrl + Shift + D</span>
+  <span class="tooltip-text">Ctrl + Shift + E</span>
 </button>
 
 <style>
 /* Floating button */
 .theme-float-btn {
   position: fixed;
-  bottom: 90px; /* not too down */
+  bottom: 90px;
   left: 20px;
   width: 52px;
   height: 52px;
@@ -1975,12 +1975,14 @@
   font-size: 1.35rem;
 }
 
-/* Tooltip (RIGHT side, no arrow) */
+/* Tooltip (default light theme) */
 .theme-float-btn .tooltip-text {
   position: absolute;
-  left: 68px;
-  background: rgba(2, 6, 23, 0.95);
-  color: #fff;
+  left: 70px;
+  top: 50%;
+  transform: translateY(-50%) translateX(-10px);
+  background: #ffffff;   /* light background for light mode */
+  color: #111111;        /* dark text for light mode */
   padding: 6px 12px;
   border-radius: 6px;
   font-size: 0.75rem;
@@ -1988,20 +1990,26 @@
   white-space: nowrap;
   opacity: 0;
   pointer-events: none;
-  transform: translateX(-8px);
-  transition: opacity 0.25s ease, transform 0.25s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  transition: opacity 0.25s ease, transform 0.25s ease, background 0.25s, color 0.25s;
 }
 
-/* Show tooltip on hover */
 .theme-float-btn:hover .tooltip-text {
   opacity: 1;
-  transform: translateX(0);
+  transform: translateY(-50%) translateX(0);
 }
 
-/* Dark mode styles */
+/* Tooltip styles in dark mode */
+body.dark-mode .theme-float-btn .tooltip-text {
+  background: #111827;  /* dark background */
+  color: #ffffff;       /* white text */
+}
+
+/* -------------------- Dark Mode for page -------------------- */
 body.dark-mode {
   background-color: #0f172a;
   color: #e5e7eb;
+  transition: background 0.3s, color 0.3s;
 }
 
 body.dark-mode .navbar,
@@ -2010,6 +2018,45 @@ body.dark-mode .card,
 body.dark-mode footer {
   background-color: #020617 !important;
   color: #e5e7eb;
+  transition: background 0.3s, color 0.3s;
+}
+
+body.dark-mode a {
+  color: #60a5fa;
+}
+
+body.dark-mode button,
+body.dark-mode input[type="submit"] {
+  background-color: #1e40af;
+  color: #fff;
+  border: none;
+  transition: background 0.3s, color 0.3s;
+}
+
+body.dark-mode input,
+body.dark-mode textarea,
+body.dark-mode select {
+  background-color: #1e293b;
+  color: #f1f5f9;
+  border: 1px solid #334155;
+  transition: background 0.3s, color 0.3s, border 0.3s;
+}
+
+body.dark-mode ::placeholder {
+  color: #94a3b8;
+}
+
+body.dark-mode .sponsor-card {
+  background-color: #1e293b;
+  color: #e5e7eb;
+  border: 1px solid #334155;
+  transition: background 0.3s, color 0.3s, border 0.3s;
+}
+
+body.dark-mode .card:hover,
+body.dark-mode button:hover,
+body.dark-mode .sponsor-card:hover {
+  background-color: #334155;
 }
 </style>
 
@@ -2017,6 +2064,7 @@ body.dark-mode footer {
 const toggleBtn = document.getElementById("themeToggle");
 const iconSpan = toggleBtn.querySelector(".icon");
 
+// Toggle dark mode
 function setTheme(isDark) {
   document.body.classList.toggle("dark-mode", isDark);
   iconSpan.textContent = isDark ? "☀️" : "🌙";
@@ -2026,14 +2074,14 @@ function setTheme(isDark) {
 // Load saved theme
 setTheme(localStorage.getItem("theme") === "dark");
 
-// Click toggle
+// Click button
 toggleBtn.addEventListener("click", () => {
   setTheme(!document.body.classList.contains("dark-mode"));
 });
 
-// Keyboard shortcut: Ctrl + Shift + D
+// Keyboard shortcut: Ctrl + Shift + E
 document.addEventListener("keydown", (e) => {
-  if (e.ctrlKey && e.shiftKey && e.key.toLowerCase() === "d") {
+  if (e.ctrlKey && e.shiftKey && e.key.toLowerCase() === "e") {
     e.preventDefault();
     setTheme(!document.body.classList.contains("dark-mode"));
   }
