@@ -1945,6 +1945,97 @@
                     </script>
                 </div>
             </section>
+            <!-- FLOATING DARK MODE BUTTON -->
+<button id="themeToggle" class="theme-float-btn" aria-label="Toggle dark mode">
+  🌙
+  <span class="tooltip-text">Ctrl + Shift + S</span>
+</button>
+
+<style>
+/* Floating button */
+.theme-float-btn {
+  position: fixed;
+  bottom: 90px; /* not too down */
+  left: 20px;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  border: none;
+  background: #1e40af;
+  color: #fff;
+  font-size: 1.4rem;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+/* Tooltip */
+.theme-float-btn .tooltip-text {
+  position: absolute;
+  left: 60px;
+  background: #020617;
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateX(-5px);
+  transition: all 0.25s ease;
+}
+
+.theme-float-btn:hover .tooltip-text {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* DARK MODE STYLES */
+body.dark-mode {
+  background-color: #0f172a;
+  color: #e5e7eb;
+}
+
+body.dark-mode .navbar,
+body.dark-mode .section,
+body.dark-mode .card,
+body.dark-mode footer {
+  background-color: #020617 !important;
+  color: #e5e7eb;
+}
+</style>
+
+<script>
+const toggleBtn = document.getElementById("themeToggle");
+
+function toggleTheme() {
+  document.body.classList.toggle("dark-mode");
+  const isDark = document.body.classList.contains("dark-mode");
+  toggleBtn.firstChild.textContent = isDark ? "☀️" : "🌙";
+  localStorage.setItem("theme", isDark ? "dark" : "light");
+}
+
+// Load saved theme
+if (localStorage.getItem("theme") === "dark") {
+  document.body.classList.add("dark-mode");
+  toggleBtn.firstChild.textContent = "☀️";
+}
+
+// Click toggle
+toggleBtn.addEventListener("click", toggleTheme);
+
+// Keyboard shortcut: Ctrl + Shift + S
+document.addEventListener("keydown", (e) => {
+  if (e.ctrlKey && e.shiftKey && e.key.toLowerCase() === "s") {
+    e.preventDefault();
+    toggleTheme();
+  }
+});
+</script>
+
         </main>
         <footer id="footer" class="footer light-background">
             <div class="container text-center">
