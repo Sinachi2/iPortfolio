@@ -3,409 +3,168 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SinaFast | Professional Services</title>
-    
-    <meta name="description" content="Explore professional Web Development, UI/UX, and SEO services by Sinachi Franklin Ezeonyeka (SinaFast).">
-    <meta name="keywords" content="Web Development, UI/UX Design, SEO, SinaFast, Graphics Design, E-commerce">
+    <title>SinaFast | Service Details</title>
+    <meta name="description" content="Explore professional services by Sinachi Franklin Ezeonyeka (SinaFast).">
+    <meta name="keywords" content="Web Development, UI/UX Design, SEO, Graphics Design, E-commerce">
 
+    <!-- Google Fonts & Bootstrap -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">        
-    <!-- Favicons -->
-        <link href="assets/img/favicon.png" rel="icon" />
-        <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
-
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
 
     <style>
-        /* --- GLOBAL THEME VARIABLES --- */
-        :root {
-            --sidebar-bg: #040b14;
-            --primary-blue: #007bff;
-            --accent-hover: #0056b3;
-            --light-bg: #f8f9fa;
-            --text-dark: #272829;
-            --text-muted: #6c757d;
-        }
-
-        body { 
-            font-family: 'Poppins', sans-serif; 
-            color: var(--text-dark); 
-            background-color: var(--light-bg);
-            overflow-x: hidden;
-        }
-
-        /* --- SIDEBAR NAVIGATION --- */
-        #header {
-            width: 300px;
-            height: 100vh;
-            position: fixed;
-            left: 0; top: 0;
-            background: var(--sidebar-bg);
-            padding: 20px;
-            z-index: 997;
-            overflow-y: auto;
-            transition: all 0.5s;
-        }
-        .profile-img img {
-            width: 120px;
-            border: 8px solid #2c2f3f;
-            display: block;
-            margin: 0 auto;
-        }
-        .sitename {
-            font-size: 24px;
-            color: #fff;
-            font-weight: 700;
-            margin-top: 15px;
-            text-decoration: none;
-            display: block;
-            text-align: center;
-        }
-        .social-links a {
-            font-size: 18px;
-            color: #fff;
-            background: #212431;
-            padding: 8px 0;
-            margin-right: 4px;
-            border-radius: 50%;
-            width: 36px; height: 36px;
-            display: inline-block;
-            transition: 0.3s;
-            text-align: center;
-        }
-        .social-links a:hover { background: var(--primary-blue); }
-
-        .navmenu { padding: 30px 0 0 0; }
-        .navmenu a { 
-            display: flex; 
-            align-items: center; 
-            color: #a8a9b4; 
-            padding: 12px 15px; 
-            text-decoration: none; 
-            transition: 0.3s; 
-            font-size: 15px;
-        }
-        .navmenu a i { font-size: 20px; padding-right: 10px; color: #6f7180; }
-        .navmenu a:hover, .navmenu .active { color: #fff; }
-        .navmenu a:hover i, .navmenu .active i { color: var(--primary-blue); }
-
-        /* --- MAIN CONTENT LAYOUT --- */
-        main { margin-left: 300px; transition: 0.5s; }
-        .page-header { 
-            background: #fff; 
-            padding: 80px 30px 40px; 
-            border-bottom: 1px solid #eee;
-        }
-
-        /* --- INTERNAL SIDEBAR (Category Switcher) --- */
-        .category-nav .list-group-item {
-            border: none;
-            padding: 15px 20px;
-            margin-bottom: 10px;
-            border-radius: 10px !important;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
-            font-weight: 500;
-            transition: 0.3s;
-        }
-        .category-nav .active {
-            background-color: var(--primary-blue) !important;
-            color: white !important;
-            transform: translateX(5px);
-        }
-
-        /* --- CONTENT CARD & ELEMENTS --- */
-        .content-card {
-            background: #fff;
-            border-radius: 20px;
-            padding: 40px;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.05);
-        }
-        .main-visual {
-            width: 100%;
-            border-radius: 15px;
-            margin-bottom: 30px;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-            object-fit: cover;
-        }
-        .feature-box {
-            background: #f0f7ff;
-            border-left: 5px solid var(--primary-blue);
-            padding: 15px 25px;
-            margin-bottom: 12px;
-            border-radius: 0 10px 10px 0;
-            font-weight: 500;
-            display: flex;
-            align-items: center;
-        }
-        .feature-box i { color: var(--primary-blue); margin-right: 15px; }
-
-        .cta-btn {
-            background: var(--primary-blue);
-            color: white;
-            padding: 15px 35px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 600;
-            display: inline-flex;
-            align-items: center;
-            transition: 0.3s;
-            margin-top: 30px;
-            border: none;
-        }
-        .cta-btn:hover {
-            background: var(--accent-hover);
-            color: white;
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(0,123,255,0.3);
-        }
-
-        /* --- FOOTER --- */
-        footer {
-            background-color: #e3f2fd;
-            padding: 40px 0;
-            margin-top: 60px;
-            text-align: center;
-        }
-
-        /* --- MOBILE RESPONSIVENESS --- */
-        @media (max-width: 1199px) {
-            #header { left: -300px; }
-            main { margin-left: 0; }
-            .page-header { padding-top: 100px; }
-        }
+        body { font-family: 'Poppins', sans-serif; background: #f8f9fa; color: #272829; }
+        .page-header { padding: 80px 30px 40px; background: #fff; border-bottom: 1px solid #eee; text-align: center; }
+        .category-nav .list-group-item { border: none; padding: 15px 20px; margin-bottom: 10px; border-radius: 10px; font-weight: 500; cursor: pointer; }
+        .category-nav .list-group-item.active { background: #007bff; color: #fff; transform: translateX(5px); }
+        .content-card { background: #fff; border-radius: 20px; padding: 40px; box-shadow: 0 15px 35px rgba(0,0,0,0.05); }
+        .main-visual { width: 100%; border-radius: 15px; margin-bottom: 30px; box-shadow: 0 10px 20px rgba(0,0,0,0.1); object-fit: cover; }
+        .feature-box { background: #f0f7ff; border-left: 5px solid #007bff; padding: 15px 25px; margin-bottom: 12px; border-radius: 0 10px 10px 0; font-weight: 500; display: flex; align-items: center; }
+        .feature-box i { color: #007bff; margin-right: 15px; }
+        .cta-btn { background: #007bff; color: #fff; padding: 15px 35px; border-radius: 50px; text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; transition: 0.3s; margin-top: 30px; border: none; }
+        .cta-btn:hover { background: #0056b3; transform: translateY(-3px); box-shadow: 0 10px 20px rgba(0,123,255,0.3); }
+        footer { background-color: #e3f2fd; padding: 40px 0; text-align: center; margin-top: 60px; }
     </style>
 </head>
 <body>
 
-    <header id="header" class="header d-flex flex-column">
-        <i class="header-toggle d-xl-none bi bi-list"></i>
-        <div class="profile-img"><img src="assets/img/sinachi.jpeg" alt="Sinachi Franklin Ezeonyeka" class="img-fluid rounded-circle">></div>
-        <a href="index.html" class="logo"><h1 class="sitename">SinaFast</h1></a>
-        
-        <div class="social-links text-center mb-3">
-            <a href="#"><i class="bi bi-twitter-x"></i></a>
-            <a href="#"><i class="bi bi-facebook"></i></a>
-            <a href="#"><i class="bi bi-instagram"></i></a>
-            <a href="#"><i class="bi bi-linkedin"></i></a>
+    <section class="page-header">
+        <div class="container">
+            <h1 class="fw-bold">Service Details</h1>
+            <p class="text-muted mb-0">Discover my tailored professional solutions for your digital success.</p>
         </div>
+    </section>
 
-        <nav class="navmenu">
-            <ul>
-                <li><a href="index.html"><i class="bi bi-house"></i> Home</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main>
-        <section class="page-header px-4">
-            <div class="container-fluid">
-                <h1 class="fw-bold">Service Details</h1>
-                <p class="text-muted mb-0">Discover my tailored professional solutions for your digital success.</p>
-            </div>
-        </section>
-
-        <section class="p-4 p-md-5">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-lg-4 col-xl-3 mb-4">
-                        <div class="list-group category-nav" id="service-menu">
-                            </div>
+    <section class="p-4 p-md-5">
+        <div class="container">
+            <div class="row">
+                <!-- Sidebar -->
+                <div class="col-lg-4 col-xl-3 mb-4">
+                    <div class="list-group category-nav" id="service-menu">
+                        <!-- Dynamically filled -->
                     </div>
+                </div>
 
-                    <div class="col-lg-8 col-xl-9">
-                        <div class="content-card" id="main-panel">
-                            <img id="service-img" src="" alt="Service Banner" class="main-visual">
-                            <h2 id="service-title" class="fw-bold mb-3"></h2>
-                            <p id="service-desc" class="text-secondary mb-4" style="line-height: 1.8;"></p>
-                            
-                            <h5 class="fw-bold mb-3">Core Expertise & Deliverables</h5>
-                            <div id="features-container"></div>
+                <!-- Main Panel -->
+                <div class="col-lg-8 col-xl-9">
+                    <div class="content-card" id="main-panel">
+                        <img id="service-img" src="/assets/img/services.jpg" alt="Service Banner" class="main-visual">
+                        <h2 id="service-title" class="fw-bold mb-3"></h2>
+                        <p id="service-desc" class="text-secondary mb-4" style="line-height: 1.8;"></p>
 
-                            <a href="index.html#contact" class="cta-btn">
-                                <i class="bi bi-chat-dots me-2"></i> Discuss Your Project
-                            </a>
-                        </div>
+                        <h5 class="fw-bold mb-3">Core Expertise & Deliverables</h5>
+                        <div id="features-container"></div>
+
+                        <a href="index.html#contact" class="cta-btn">
+                            <i class="bi bi-chat-dots me-2"></i> Discuss Your Project
+                        </a>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <footer>
-            <div class="container">
-                <p class="mb-1">© 2026 <strong>SinaFast</strong> — All Rights Reserved.</p>
-                <p class="small text-muted mb-3">Designed by Sinachi Franklin Ezeonyeka</p>
-                <div class="social-links">
-                    <a href="#" style="color:#555"><i class="bi bi-twitter-x"></i></a>
-                    <a href="#" style="color:#555"><i class="bi bi-linkedin"></i></a>
-                </div>
-            </div>
-        </footer>
-    </main>
+    <footer>
+        <div class="container">
+            <p class="mb-1">© 2026 <strong>SinaFast</strong> — All Rights Reserved.</p>
+            <p class="small text-muted mb-3">Designed by Sinachi Franklin Ezeonyeka</p>
+        </div>
+    </footer>
 
+    <!-- GSAP & Script -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script>
         const services = {
             "web-dev": {
                 title: "Website Development",
                 img: "assets/img/services.jpg",
-                desc: "I provide professional front-end and full-stack development services, creating fast, responsive websites that mirror your brand. Specialized in HTML, CSS, JavaScript, and React, I ensure every project is built with clean, maintainable code optimized for performance and SEO.",
-                features: ["Responsive Design for all devices", "Clean and Maintainable Code", "SEO Ready Architecture", "Performance Optimization", "Cross-browser Compatibility"]
+                desc: "Modern, fast, and responsive websites built with clean code.",
+                features: ["Responsive Design", "Clean Code", "SEO Ready", "Performance Optimization", "Cross-browser Compatibility"]
             },
             "ui-ux": {
                 title: "UI / UX Design",
                 img: "assets/img/services.jpg",
-                desc: "Designing user-centered interfaces that maximize engagement. I focus on intuitive layouts, wireframes, and interactive prototypes to ensure your users have a seamless and accessible experience.",
-                features: ["Wireframes & Prototyping", "Accessibility (WCAG) Compliance", "User Flow Design", "Branding & Visual Identity", "Interaction Design"]
+                desc: "User-centered interface design for a seamless experience.",
+                features: ["Wireframes & Prototyping", "Accessibility Compliance", "User Flow Design", "Brand Identity", "Interaction Design"]
             },
             "graphics": {
                 title: "Graphics Design",
                 img: "assets/img/services.jpg",
-                desc: "Striking visuals tailored to your brand's identity. From logo creation to social media marketing materials, I use the Adobe Creative Suite to enhance your brand presence.",
-                features: ["Logo & Branding Design", "Flyers, Posters & Banners", "Social Media Content", "Typography Mastery", "Figma & Illustrator Expertise"]
+                desc: "Creative visuals for branding and marketing.",
+                features: ["Logo & Branding", "Flyers & Posters", "Social Media Graphics", "Typography", "Adobe Suite Expertise"]
             },
             "maintenance": {
                 title: "Web Maintenance",
                 img: "assets/img/services.jpg",
-                desc: "Ongoing support to ensure your website remains secure and up-to-date. I provide regular checks, content updates, and bug fixes to prevent downtime and maintain high performance.",
+                desc: "Keep your website secure, updated, and performing well.",
                 features: ["Error Troubleshooting", "Security Monitoring", "Content Revisions", "Regular Backups", "Speed Optimization"]
             },
             "ecommerce": {
                 title: "E-Commerce Solutions",
                 img: "assets/img/services.jpg",
-                desc: "    This training helps children learn how to use the computer in a fun and easy way. Kids will learn how to use the mouse and keyboard, draw pictures, type simple words, play learning games, and understand basic computer safety.",
-                features: ["Payment Gateway Integration", "Inventory Management", "User-Friendly Checkout", "Order Tracking Systems", "Conversion Analytics"]
+                desc: "Secure online stores built to sell efficiently.",
+                features: ["Payment Gateway Integration", "Inventory Management", "User-Friendly Checkout", "Order Tracking", "Conversion Analytics"]
             },
             "training": {
                 title: "Kids Computer Skills Training",
                 img: "assets/img/services.jpg",
-                desc: "Scalable online stores built to convert. I integrate secure payment gateways, inventory management, and analytics to help your business grow in the digital marketplace.",
-                features: ["Basic computer parts (monitor, mouse, keyboard)", "How to type and use the mouse", "Drawing and coloring on the computer", "Simple typing and learning games", "Internet safety basics (very simple)"]
+                desc: "Teach children basic computer skills in a fun and easy way.",
+                features: ["Basic Computer Parts", "Typing & Mouse Skills", "Drawing & Coloring", "Simple Learning Games", "Internet Safety"]
             },
             "seo": {
                 title: "SEO Optimization",
                 img: "assets/img/services.jpg",
-                desc: "Boost your organic traffic through strategic On-Page and Off-Page SEO. I optimize site structure and content to help you rank higher and reach more customers.",
-                features: ["Keyword Strategy", "Meta Data Optimization", "Page Speed Performance", "Backlink Strategy", "Analytics & Reporting"]
-            }            
-{
-  "mobile": {
-    title: "Mobile-First Development",
-    img: "assets/img/services.jpg",
-    desc: "I build mobile-first websites that adapt perfectly to all screen sizes, ensuring smooth user experience across phones, tablets, and desktops.",
-    features: [
-      "Mobile-First Design Approach",
-      "Responsive Layouts",
-      "Cross-Device Compatibility",
-      "Touch-Optimized Interfaces",
-      "Modern CSS & Bootstrap Grid"
-    ]
-  },
-
-  "performance": {
-    title: "Performance Optimization",
-    img: "assets/img/services.jpg",
-    desc: "Improve website speed, responsiveness, and efficiency using modern optimization techniques that enhance user experience and SEO.",
-    features: [
-      "Page Speed Optimization",
-      "Asset & Image Compression",
-      "Clean & Optimized Code",
-      "Lazy Loading Techniques",
-      "Core Web Vitals Improvement"
-    ]
-  },
-
-  "react": {
-    title: "React Front-End Development",
-    img: "assets/img/services.jpg",
-    desc: "Modern, scalable, and interactive user interfaces built with React and reusable components.",
-    features: [
-      "Reusable React Components",
-      "State & Props Management",
-      "Dynamic User Interfaces",
-      "API Integration",
-      "Optimized Front-End Performance"
-    ]
-  },
-
-  "landing": {
-    title: "Landing Page Design",
-    img: "assets/img/services.jpg",
-    desc: "High-converting landing pages designed to capture leads, promote products, and drive user actions.",
-    features: [
-      "Conversion-Focused Layouts",
-      "Clear Call-to-Action Design",
-      "Fast Loading Pages",
-      "Responsive & Accessible Design",
-      "SEO-Friendly Structure"
-    ]
-  },
-
-  "redesign": {
-    title: "Website Redesign",
-    img: "assets/img/services.jpg",
-    desc: "Transform outdated websites into modern, visually appealing, and high-performance digital experiences.",
-    features: [
-      "UI & UX Improvements",
-      "Modern Visual Design",
-      "Content & Layout Refresh",
-      "Performance Enhancements",
-      "Mobile Responsiveness"
-    ]
-  },
-
-  "darkmode": {
-    title: "Dark Mode Integration",
-    img: "assets/img/services.jpg",
-    desc: "Implement smooth light and dark theme switching for improved accessibility and user comfort.",
-    features: [
-      "Light & Dark Theme Toggle",
-      "Smooth Theme Transitions",
-      "System Preference Detection",
-      "Accessibility-Friendly Colors",
-      "Persistent User Settings"
-    ]
-  },
-
-  "consultation": {
-    title: "Website Consultation",
-    img: "assets/img/services.jpg",
-    desc: "Professional guidance to help you plan, structure, and improve your website for better results.",
-    features: [
-      "Project Planning & Strategy",
-      "UI/UX Advice",
-      "Technology Recommendations",
-      "Performance Review",
-      "Growth & Scalability Tips"
-    ]
-  },
-
-  "analytics": {
-    title: "Analytics & Tracking Setup",
-    img: "assets/img/services.jpg",
-    desc: "Track visitor behavior and website performance using analytics tools to make data-driven decisions.",
-    features: [
-      "Google Analytics Setup",
-      "Event & Conversion Tracking",
-      "Traffic Insights",
-      "Performance Monitoring",
-      "Reporting & Analysis"
-    ]
-  },
-
-  "content": {
-    title: "Content Management Support",
-    img: "assets/img/services.jpg",
-    desc: "Keep your website fresh and updated with professional content management and updates.",
-    features: [
-      "Text & Image Updates",
-      "Portfolio & Project Updates",
-      "Content Structure Management",
-      "SEO-Friendly Content",
-      "Ongoing Support"
-    ]
-  }
-}
-
+                desc: "Boost your organic traffic with strategic SEO techniques.",
+                features: ["Keyword Strategy", "Meta Data Optimization", "Page Speed", "Backlink Strategy", "Analytics Reporting"]
+            },
+            "mobile": {
+                title: "Mobile-First Development",
+                img: "assets/img/services.jpg",
+                desc: "Optimized layouts for phones, tablets, and desktops.",
+                features: ["Mobile-First Design", "Responsive Layouts", "Cross-Device Compatibility", "Touch-Optimized Interfaces", "Modern CSS & Bootstrap"]
+            },
+            "react": {
+                title: "React Front-End Development",
+                img: "assets/img/services.jpg",
+                desc: "Interactive interfaces built with React and reusable components.",
+                features: ["Reusable Components", "State Management", "Dynamic UIs", "API Integration", "Front-End Optimization"]
+            },
+            "landing": {
+                title: "Landing Page Design",
+                img: "assets/img/services.jpg",
+                desc: "High-converting landing pages for products and campaigns.",
+                features: ["Conversion-Focused Layouts", "CTA Design", "Fast Loading Pages", "Responsive Design", "SEO-Friendly Structure"]
+            },
+            "redesign": {
+                title: "Website Redesign",
+                img: "assets/img/services.jpg",
+                desc: "Modernize outdated websites with fresh UI and UX.",
+                features: ["UI/UX Improvements", "Visual Design", "Content Refresh", "Performance Enhancement", "Mobile Responsiveness"]
+            },
+            "darkmode": {
+                title: "Dark Mode Integration",
+                img: "assets/img/services.jpg",
+                desc: "Light & dark theme toggle for user comfort.",
+                features: ["Theme Toggle", "Smooth Transitions", "System Preference Detection", "Accessible Colors", "Persistent Settings"]
+            },
+            "consultation": {
+                title: "Website Consultation",
+                img: "assets/img/services.jpg",
+                desc: "Professional advice on website planning and improvement.",
+                features: ["Project Planning", "UI/UX Guidance", "Tech Recommendations", "Performance Review", "Growth Tips"]
+            },
+            "analytics": {
+                title: "Analytics & Tracking Setup",
+                img: "assets/img/services.jpg",
+                desc: "Track user behavior and website performance.",
+                features: ["Google Analytics", "Event Tracking", "Traffic Insights", "Performance Monitoring", "Reports & Analysis"]
+            },
+            "content": {
+                title: "Content Management Support",
+                img: "assets/img/services.jpg",
+                desc: "Keep your website updated with professional content support.",
+                features: ["Text & Image Updates", "Portfolio Updates", "Content Structure", "SEO-Friendly Content", "Ongoing Support"]
+            }
         };
 
         function renderPage() {
@@ -414,7 +173,7 @@
             const id = params.get('id') || 'web-dev';
             const data = services[id];
 
-            // 1. Generate Navigation
+            // Generate Navigation
             Object.keys(services).forEach(key => {
                 const a = document.createElement('a');
                 a.href = `?id=${key}`;
@@ -423,145 +182,26 @@
                 menu.appendChild(a);
             });
 
-            // 2. Load Content
-            if(data) {
+            // Load Service Content
+            if (data) {
                 document.title = `${data.title} | SinaFast Services`;
                 document.getElementById('service-title').innerText = data.title;
                 document.getElementById('service-desc').innerText = data.desc;
                 document.getElementById('service-img').src = data.img;
-                
+
                 const container = document.getElementById('features-container');
-                container.innerHTML = data.features.map(f => 
+                container.innerHTML = data.features.map(f =>
                     `<div class="feature-box"><i class="bi bi-check-circle-fill"></i> ${f}</div>`
                 ).join('');
 
-                // 3. GSAP Animations
+                // GSAP Animations
                 gsap.from("#service-img", { opacity: 0, scale: 0.95, duration: 0.8, ease: "power2.out" });
-                gsap.from("#service-title, #service-desc, .cta-btn", { 
-                    opacity: 0, y: 30, duration: 0.7, stagger: 0.2, ease: "power1.out" 
-                });
-                gsap.from(".feature-box", { 
-                    opacity: 0, x: 30, duration: 0.5, stagger: 0.1, delay: 0.6 
-                });
+                gsap.from("#service-title, #service-desc, .cta-btn", { opacity: 0, y: 30, duration: 0.7, stagger: 0.2, ease: "power1.out" });
+                gsap.from(".feature-box", { opacity: 0, x: 30, duration: 0.5, stagger: 0.1, delay: 0.6 });
             }
         }
 
         window.onload = renderPage;
     </script>
-                        <!-- Bootstrap Icons -->
-                    <link
-                        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
-                        rel="stylesheet"
-                    />
-
-                    <div class="floating-share-wrapper" id="shareWrapper">
-                        <a href="#" class="floating-share-btn" id="shareBtn">
-                            <i class="bi bi-share-fill"></i>
-                        </a>
-
-                        <div class="floating-share-links" id="shareLinks">
-                            <a href="https://x.com/SinachiFra16993" target="_blank"><i class="bi bi-twitter-x"></i></a>
-                            <a href="https://www.facebook.com/profile.php?id=61575225039124" target="_blank"
-                                ><i class="bi bi-facebook"></i
-                            ></a>
-                            <a href="https://www.instagram.com/sinachi2016/" target="_blank"
-                                ><i class="bi bi-instagram"></i
-                            ></a>
-                            <a href="https://wa.me/2348063332087" target="_blank"><i class="bi bi-whatsapp"></i></a>
-                            <a href="https://github.com/Sinachi2" target="_blank"><i class="bi bi-github"></i></a>
-                            <a href="https://www.linkedin.com/in/sinachi-franklin-ezeonyeka-581233373/" target="_blank"
-                                ><i class="bi bi-linkedin"></i
-                            ></a>
-                            <a href="mailto:ezeonyekasinachi@gmail.com,ezeonyeksinachifranklin@gmail.com">
-                                <i class="bi bi-envelope"></i>
-                            </a>
-                        </div>
-                    </div>
-
-                    <style>
-                        /* Wrapper */
-                        .floating-share-wrapper {
-                            position: fixed;
-                            top: 90px; /* ✅ UP UP UP */
-                            right: 15px; /* ✅ OTHER SIDE */
-                            z-index: 9999;
-                        }
-
-                        /* Main button */
-                        .floating-share-btn {
-                            width: 48px;
-                            height: 48px;
-                            background: linear-gradient(45deg, #6c63ff, #9f7eff);
-                            color: #fff;
-                            border-radius: 50%;
-                            display: flex;
-                            align-items: center;
-                            justify-content: center;
-                            font-size: 20px;
-                            text-decoration: none;
-                            box-shadow: 0 8px 18px rgba(0, 0, 0, 0.25);
-                            transition: 0.3s;
-                        }
-
-                        /* Links */
-                        .floating-share-links {
-                            display: flex;
-                            flex-direction: column;
-                            gap: 12px;
-                            margin-top: 14px;
-                            opacity: 0;
-                            pointer-events: none;
-                            transform: translateX(20px);
-                            transition: 0.35s ease;
-                        }
-
-                        .floating-share-links.active {
-                            opacity: 1;
-                            pointer-events: auto;
-                            transform: translateX(0);
-                        }
-
-                        /* Social buttons */
-                        .floating-share-links a {
-                            width: 44px;
-                            height: 44px;
-                            background: #fff;
-                            color: #6c63ff;
-                            border-radius: 50%;
-                            display: flex;
-                            align-items: center;
-                            justify-content: center;
-                            font-size: 18px;
-                            box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
-                            transition: 0.3s;
-                        }
-
-                        .floating-share-links a:hover {
-                            transform: scale(1.15);
-                        }
-                    </style>
-
-                    <script>
-                        const shareBtn = document.getElementById("shareBtn");
-                        const shareLinks = document.getElementById("shareLinks");
-                        const wrapper = document.getElementById("shareWrapper");
-
-                        shareBtn.addEventListener("click", (e) => {
-                            e.preventDefault();
-                            shareLinks.classList.toggle("active");
-                            shareBtn.style.transform = shareLinks.classList.contains("active")
-                                ? "rotate(45deg)"
-                                : "rotate(0)";
-                        });
-
-                        document.addEventListener("click", (e) => {
-                            if (!wrapper.contains(e.target)) {
-                                shareLinks.classList.remove("active");
-                                shareBtn.style.transform = "rotate(0)";
-                            }
-                        });
-                    </script>
-                </div>
-            </section>
 </body>
 </html>
